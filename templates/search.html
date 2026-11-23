@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Search{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>Search</h1>
+  <p class="muted">{{ leads|length }} result(s) for <strong>{{ q|safe }}</strong></p>
+  {% include "_lead_table.html" %}
+</div>
+{% endblock %}

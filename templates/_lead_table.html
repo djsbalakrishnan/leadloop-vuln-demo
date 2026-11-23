@@ -1,0 +1,17 @@
+<table class="leads">
+  <thead>
+    <tr><th>Name</th><th>Company</th><th>Status</th><th class="num">Value</th></tr>
+  </thead>
+  <tbody>
+  {% for lead in leads %}
+    <tr>
+      <td><a href="{{ url_for('lead_detail', lead_id=lead.id) }}">{{ lead.name }}</a></td>
+      <td>{{ lead.company }}</td>
+      <td><span class="pill pill-{{ lead.status|lower }}">{{ lead.status }}</span></td>
+      <td class="num">${{ "{:,}".format(lead.value) }}</td>
+    </tr>
+  {% else %}
+    <tr><td colspan="4" class="muted">No leads found.</td></tr>
+  {% endfor %}
+  </tbody>
+</table>

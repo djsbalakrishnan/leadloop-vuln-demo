@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}{{ lead.name }}{% endblock %}
+{% block content %}
+<div class="card">
+  <a class="back" href="{{ url_for('leads') }}">&larr; All leads</a>
+  <h1>{{ lead.name }}</h1>
+  <p class="muted">{{ lead.company }} · <span class="pill pill-{{ lead.status|lower }}">{{ lead.status }}</span></p>
+  <dl class="details">
+    <dt>Email</dt><dd>{{ lead.email }}</dd>
+    <dt>Phone</dt><dd>{{ lead.phone }}</dd>
+    <dt>Deal value</dt><dd>${{ "{:,}".format(lead.value) }}</dd>
+  </dl>
+
+  <h2>Notes</h2>
+  <div class="notes">{{ lead.notes|safe }}</div>
+
+  <form method="post" class="notes-form">
+    <label>Edit notes
+      <textarea name="notes" rows="5">{{ lead.notes }}</textarea>
+    </label>
+    <button type="submit">Save notes</button>
+  </form>
+</div>
+{% endblock %}

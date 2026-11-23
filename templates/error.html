@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Error{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>Something went wrong</h1>
+  <div class="alert">{{ message }}</div>
+  {% if query %}<h2>Query</h2><pre>{{ query }}</pre>{% endif %}
+  {% if trace %}<h2>Traceback</h2><pre>{{ trace }}</pre>{% endif %}
+</div>
+{% endblock %}

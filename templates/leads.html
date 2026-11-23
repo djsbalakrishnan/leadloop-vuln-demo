@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}My leads{% endblock %}
+{% block content %}
+<div class="card">
+  <h1>My leads</h1>
+  <p class="muted">{{ leads|length }} open leads assigned to you.</p>
+  {% include "_lead_table.html" %}
+</div>
+{% endblock %}

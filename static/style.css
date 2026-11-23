@@ -1,0 +1,33 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f4f5f7; color: #1f2933; }
+a { color: #2457c5; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.topbar { display: flex; align-items: center; gap: 24px; padding: 12px 32px; background: #1f2933; color: #fff; }
+.topbar a { color: #fff; }
+.brand { font-weight: 700; font-size: 18px; letter-spacing: .3px; }
+.search { flex: 1; }
+.search input { width: 100%; max-width: 420px; padding: 8px 12px; border-radius: 6px; border: 0; }
+nav { display: flex; gap: 16px; align-items: center; font-size: 14px; }
+.who { opacity: .75; }
+main { max-width: 960px; margin: 32px auto; padding: 0 16px; }
+.card { background: #fff; border-radius: 10px; padding: 28px 32px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.card.narrow { max-width: 380px; margin: 60px auto; }
+h1 { margin: 0 0 4px; font-size: 24px; }
+h2 { font-size: 16px; margin-top: 28px; }
+.muted { color: #6b7785; margin-top: 0; }
+label { display: block; font-size: 14px; margin: 14px 0; }
+input[type=text], input[type=password], textarea { display: block; width: 100%; margin-top: 6px; padding: 9px 11px; border: 1px solid #cfd6de; border-radius: 6px; font: inherit; }
+button { background: #2457c5; color: #fff; border: 0; padding: 9px 18px; border-radius: 6px; font: inherit; cursor: pointer; }
+.alert { background: #fdecea; color: #8a1c13; padding: 10px 12px; border-radius: 6px; font-size: 14px; }
+table.leads { width: 100%; border-collapse: collapse; margin-top: 12px; }
+.leads th, .leads td { text-align: left; padding: 10px 8px; border-bottom: 1px solid #eef0f3; }
+.leads th { font-size: 12px; text-transform: uppercase; color: #6b7785; }
+.num { text-align: right !important; }
+.pill { font-size: 12px; padding: 2px 8px; border-radius: 999px; background: #e6eaf0; }
+.pill-new { background: #e3f0ff; } .pill-qualified { background: #e2f6e9; }
+.pill-negotiation { background: #fff4d6; } .pill-lost { background: #f3e3e3; }
+.details { display: grid; grid-template-columns: 120px 1fr; gap: 6px 12px; }
+.details dt { color: #6b7785; }
+.notes { background: #fafbfc; border: 1px solid #eef0f3; border-radius: 6px; padding: 12px; min-height: 40px; }
+.back { font-size: 14px; }
+pre { background: #1f2933; color: #e4e7eb; padding: 12px; border-radius: 6px; overflow-x: auto; font-size: 12px; }
